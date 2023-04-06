@@ -30,13 +30,13 @@ else
 fi
 
 echo "Trying ${BUILD_TOOL} login -u $(oc whoami) -p $(oc whoami -t) ${TLS_VERIFY}  ${EXTERNAL_REGISTRY}"
-${BUILD_TOOL} login -u $(oc whoami) -p $(oc whoami -t) ${TLS_VERIFY}  ${EXTERNAL_REGISTRY}
+#${BUILD_TOOL} login -u $(oc whoami) -p $(oc whoami -t) ${TLS_VERIFY}  ${EXTERNAL_REGISTRY}
 
-if [[ $? -ne 0 ]]
-then
-  echo "Login Failed" 
-  exit
-fi
+#if [[ $? -ne 0 ]]
+#then
+#  echo "Login Failed" 
+#  exit
+#fi
 
 IMAGE_PREFIX_EXTERNAL=${EXTERNAL_REGISTRY}/${PROJECT_NAME}
 IMAGE_PREFIX=image-registry.openshift-image-registry.svc:5000/${PROJECT_NAME}
